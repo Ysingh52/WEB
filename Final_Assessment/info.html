@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="normalize.css" type="text/css" />
+        <script src="info.js"></script>
+        <title>Yuvraj Singh LogIn Page</title>
+    </head>
+
+    <body>
+        <header>
+            <img id="logo" alt="Logo" src="images/logo.jpg" />
+            <h1>Sign-up</h1>
+
+            <nav class="navi">
+                <span id="menu-text"></span>
+                <ul>
+                    <li id="li">
+                        <a href="honesty.html">Welcome</a>
+                    </li>
+                    <li id="li">
+                        <a href="info.html"><b>Signup</b></a>
+                    </li>
+                    <li id="li">
+                        <a href="reflection.html">Reflection</a>
+                    </li> 
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+
+            <div id="form">
+                <br>
+                <p><b>Fill in Your Information here - </b></p>
+                <br>
+
+                <form id="signup" name="signup" action="https://httpbin.org/post" method="POST">
+                    <label for="s-username">
+                        Username -
+                    </label>
+
+                    <input id="s-username" name="username" type="text" required />
+                    <label for="s-password">
+                        Password -
+                    </label>
+
+                    <input id="s-password" name="password"z type="password" required />
+                    <label for="s-confirm_password">
+                        Confirm Password -
+                    </label>
+
+                    <input id="s-cpassword" name="cpassword" type="password" required />
+
+                    
+                    <label for="s-fname">
+                        First Name -
+                    </label>
+                    <input id="s-fname" name="fname" type="text" required
+                        pattern="[A-Z][a-zA-Z]*"
+                        placeholder="must start with a cap and only alphabet allowed." />
+
+                    <label for="s-lname">
+                        Last Name -
+                    </label>
+                    <input id="s-lname" name="lname" type="text" required
+                        pattern="[A-Z][a-zA-Z]*"
+                        placeholder="must start with a cap and only alphabet allowed" />
+
+                    <label>
+                        Education Status -
+                     </label>
+                    <div class="edustatus">
+                        <input name="edus" type="radio" value="Graduated" required />Graduated
+                        <input name="edus" type="radio" value="Currently enrolled" />Currently enrolled
+                        <input name="edus" type="radio" value="Did not graduate" />Did not graduate
+                    </div>
+
+                    <label for="s-email">
+                        Email -
+                    </label>
+                    <input id="s-email" name="email" type="email"
+                        placeholder="yourmail@xyz.com"
+                        required />
+
+                    <label for="s-age">
+                        Age -
+                    </label>
+                    <input id="s-age" name="age" type="number"
+                        placeholder="must be between 18-60"
+                        required />
+                   
+
+                    <input type="hidden" name="lastName" id="lastName" value="Yuvraj Singh" />
+                    <input type="hidden" name="studentId" id="studentId" value="145550208" />
+
+                    <br>
+                    <div id="buttons">
+                        <input type="submit" name="submit" value="Submit" />
+                        <input type="reset" name="reset" value="Clear" />
+                    </div>
+                </form>
+            </div>
+
+            <aside>
+                <h4 class="hidden" id="errorHeader"></h4>
+                <div class="hidden" id="error"></div>
+            </aside>
+        </main>
+
+        <footer>
+            <h4>2021 - Yuvraj Singh<br>Github -<a href="url">https://github.com/</a></h4>
+        </footer>
+    </body>
+</html>
